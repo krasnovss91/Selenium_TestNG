@@ -34,10 +34,10 @@ public class SeleniumWebDriverManagerTests {
 
     @Test
     public void secondTest() throws InterruptedException {
-        driver.findElement(By.cssSelector("[id='firstName']")).sendKeys("Petr");
-        driver.findElement(By.cssSelector("[id='lastName']")).sendKeys("Petrov");
+        driver.findElement(By.cssSelector("[id='firstName']")).sendKeys("Elena");
+        driver.findElement(By.cssSelector("[id='lastName']")).sendKeys("Nikihporova");
         driver.findElement(By.cssSelector("[id='userNumber']")).sendKeys("1234567898");
-        driver.findElement(By.cssSelector("[for='gender-radio-1']")).click();
+        driver.findElement(By.cssSelector("[for='gender-radio-2']")).click();
         driver.findElement(By.cssSelector("[id='submit']")).click();
 
         Assertions.assertTrue(driver.findElement(By.cssSelector("[id='example-modal-sizes-title-lg']")).isDisplayed());
