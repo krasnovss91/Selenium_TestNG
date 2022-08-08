@@ -1,8 +1,8 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -26,7 +26,7 @@ public class SeleniumWebDriverManagerTests {
         driver.findElement(By.cssSelector("[for='gender-radio-1']")).click();
         driver.findElement(By.cssSelector("[id='submit']")).click();
 
-        Assertions.assertTrue(driver.findElement(By.cssSelector("[id='example-modal-sizes-title-lg']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("[id='example-modal-sizes-title-lg']")).isDisplayed());
 
         Thread.sleep(3000);
 
@@ -40,7 +40,7 @@ public class SeleniumWebDriverManagerTests {
         driver.findElement(By.cssSelector("[for='gender-radio-2']")).click();
         driver.findElement(By.cssSelector("[id='submit']")).click();
 
-        Assertions.assertTrue(driver.findElement(By.cssSelector("[id='example-modal-sizes-title-lg']")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.cssSelector("[id='example-modal-sizes-title-lg']")).isDisplayed());
 
         Thread.sleep(3000);
 
